@@ -33,6 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.3.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,14 +58,99 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminDasboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminDasboard.Designer.cs">
+      <DependentUpon>adminDasboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminForm.Designer.cs">
+      <DependentUpon>adminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="akreditasiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>akreditasiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="akreditasiDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>akreditasiDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="akreditasiDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>akreditasiDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="inputAK01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inputAK01.Designer.cs">
+      <DependentUpon>inputAK01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menuInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuInput.Designer.cs">
+      <DependentUpon>menuInput.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="standar01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="standar01.Designer.cs">
+      <DependentUpon>standar01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userDassboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userDassboard.Designer.cs">
+      <DependentUpon>userDassboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userForm.Designer.cs">
+      <DependentUpon>userForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userSIGNUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userSIGNUP.Designer.cs">
+      <DependentUpon>userSIGNUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewData.Designer.cs">
+      <DependentUpon>viewData.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="adminDasboard.resx">
+      <DependentUpon>adminDasboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminForm.resx">
+      <DependentUpon>adminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inputAK01.resx">
+      <DependentUpon>inputAK01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuInput.resx">
+      <DependentUpon>menuInput.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +160,55 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="standar01.resx">
+      <DependentUpon>standar01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userDassboard.resx">
+      <DependentUpon>userDassboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userForm.resx">
+      <DependentUpon>userForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userSIGNUP.resx">
+      <DependentUpon>userSIGNUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewData.resx">
+      <DependentUpon>viewData.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="akreditasiDataSet.xsc">
+      <DependentUpon>akreditasiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="akreditasiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>akreditasiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="akreditasiDataSet.xss">
+      <DependentUpon>akreditasiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="akreditasiDataSet1.xsc">
+      <DependentUpon>akreditasiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="akreditasiDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>akreditasiDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="akreditasiDataSet1.xss">
+      <DependentUpon>akreditasiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="akreditasiDataSet2.xsc">
+      <DependentUpon>akreditasiDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="akreditasiDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>akreditasiDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="akreditasiDataSet2.xss">
+      <DependentUpon>akreditasiDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +221,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

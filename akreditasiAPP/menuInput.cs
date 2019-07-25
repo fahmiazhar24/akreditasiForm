@@ -10,25 +10,23 @@ using System.Windows.Forms;
 
 namespace akreditasiAPP
 {
-    public partial class Form1 : Form
+    public partial class menuInput : Form
     {
-        public Form1()
+        public menuInput()
         {
             InitializeComponent();
         }
 
-        private void btnADM_Click(object sender, EventArgs e)
+        private void btID_Click(object sender, EventArgs e)
         {
-            adminForm adm = new adminForm();
-            adm.Show();
-            this.Hide();
-
+            inputAK01 ip = new inputAK01();
+            ip.Show();
         }
 
-        private void btnMHS_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            userForm usr = new userForm();
-            usr.Show();
+            standar01 std = new standar01();
+            std.Show();
         }
     }
 }
