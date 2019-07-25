@@ -21,6 +21,7 @@ namespace akreditasiAPP
         {
             // TODO: This line of code loads data into the 'akreditasiDataSet1.id_data_akre' table. You can move, or remove it, as needed.
             this.id_data_akreTableAdapter.Fill(this.akreditasiDataSet1.id_data_akre);
+            //
 
         }
 
